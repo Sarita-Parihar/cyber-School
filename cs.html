@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .head_section {
+            background-image: url('e-commerce-7159643_1280.jpg');
+        }
+
+        header {
+            background-color: #333;
+            color: rgb(160, 227, 229);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 90px;
+            margin-top: 0;
+        }
+
+        /* Style the navbar */
+        nav {
+            background-color: #352a2a;
+            overflow: hidden;
+
+
+        }
+
+        /* Style the navbar links */
+        nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 100px;
+            text-decoration: none;
+            font-size: 25px;
+
+        }
+
+        /* Style the dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Style the dropdown button */
+        .dropbtn {
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            font-size: 25px;
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #6d6767;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        /* Style the dropdown links */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            align-content: center;
+        }
+
+
+        /* Change the background color of the navbar links on hover */
+        nav a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #c4cfd3;
+            color: blue;
+        }
+
+        /* Change the background color of the dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #51aec5;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .btn3{
+color: rgb(245, 241, 241);
+text-align: center;
+padding: 14px 100px;
+font-size: 25px;
+float: right;
+background-color: #000;
+cursor:pointer;
+
+        }
+        .btn3:hover{
+            color: rgb(176, 108, 240);
+            background-color: #9bece8;
+        }
+
+        section {
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            font-size: 25px;
+            margin-top: 50px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            /* Change the font size of the header */
+            header {
+                font-size: 18px;
+            }
+
+            /* Change the padding and the display of the navbar links */
+            nav a {
+                padding: 160px 150px;
+                display: block;
+            }
+
+            /* Hide the dropdown button and the dropdown content */
+            .dropbtn,
+            .dropdown-content {
+                display: none;
+            }
+
+            /* Change the margin and the font size of the section */
+            section {
+                margin: 10px;
+                font-size: 20px;
+            }
+
+            /* Change the margin and the font size of the footer */
+            footer {
+                margin: 10px;
+                font-size: 16px;
+            }
+        }
+
+        .about {
+
+            margin-top: 2%;
+        }
+
+        .about-section {
+            padding: 2px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+            background-size: cover;
+            background-image: url('hacker-4867349_1280.jpg');
+        }
+
+        .about-section h1 {
+            font-size: 5rem;
+            margin-bottom: 0rem;
+        }
+
+        .about-section p {
+            font-size: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .container {
+            padding: 0 16px;
+
+        }
+
+        .title {
+            color: rgb(15, 11, 11);
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(23, 11, 185, 0.2);
+            margin: 8px;
+            max-width: 100%;
+
+        }
+
+        .content {
+            display: flex;
+            background-color: #51aec5;
+            width: 100%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+
+        .main h2 {
+            color: rgb(6, 66, 46);
+            font-size: 30px;
+        }
+
+        .main p,
+        ul li {
+            color: rgb(94, 51, 16);
+            font-size: 20px;
+        }
+
+        #feature {
+            color: rgb(76 59 59);
+        }
+
+        /* Responsive adjustments */
+
+
+        @media screen and (max-width: 768px) {
+            .about-section h1 {
+                font-size: 3rem;
+            }
+
+            .about-section p {
+                font-size: 1.5rem;
+            }
+
+            .mail {
+                font-size: .5rem;
+            }
+
+        }
+
+        .raw {
+            background-image: url('security-5285939_1280.jpg');
+            background-size: cover;
+            display: flex;
+            width: 100%;
+            margin-top: 1%;
+            margin-bottom: 0%;
+
+        }
+
+        .contact-left {
+            flex-basis: 35%;
+            margin-bottom: 10%;
+        }
+
+        .contact-right {
+            flex-basis: 60%;
+        }
+
+        .contact-left p {
+            margin-top: 40px;
+            margin-left: 5%;
+        }
+
+
+
+        .contact-left p {
+            color: rgb(17, 14, 14);
+            font-size: 30px;
+            font-family: "Protest Revolution", sans-serif;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 15px;
+            color: e73e8;
+            display: inline-block;
+            transition: transform 0.5s;
+            margin-left: 5%;
+        }
+
+        .contact-left p i {
+            color: #ff183e;
+            margin-right: 15px;
+            font-size: 30px;
+        }
+
+        .social-icons a:hover {
+            color: rgb(150, 70, 70);
+            transform: translateY(-5px);
+            cursor: pointer;
+        }
+
+        .btn.btn2 {
+            display: inline-block;
+            background: #5774c4;
+            width: 15%;
+            height: 200%;
+            margin-bottom: 15%;
+            font-size: 20px;
+            border: solid #596877;
+            border-radius: 10px;
+            margin-left: 6%;
+        }
+
+        .btn.btn2:hover {
+            color: rgb(61, 68, 19);
+            transform: translatey(-5px);
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+
+        .contact-right form {
+            width: 90%;
+            margin-top: 0%;
+            margin-left: -16px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            border: 0;
+            outline: none;
+            background: #74b7d1;
+            padding: 15px;
+            margin: 15px 0;
+            color: rgb(31, 25, 25);
+            font-size: 18px;
+            border-radius: 6px;
+            margin-left: 5%;
+        }
+
+        .contact-left {
+            text-align: center;
+            margin-left: 5px;
+            margin-top: 50px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .contact-left p {
+            font-size: 20px;
+            margin-top: -28px;
+        }
+
+        .contact-left h3 {
+            font-size: 30px;
+            color: #2f18ff;
+        }
+
+        .logo {
+
+            margin-bottom: -30px;
+            ;
+            color: #5774c4;
+            color: #0c2670;
+        }
+
+        .logo:hover {
+            color: #5774c4;
+
+        }
+
+        .address {
+            margin-bottom: 50px;
+        }
+
+        .email {
+            margin-bottom: 90px;
+        }
+
+        .contact-right-2 {
+            margin-left: 25px;
+            margin-top: 100px;
+        }
+
+        .contact-right-2 h1 {
+            color: #2f18ff;
+            font-family: "Roboto", sans-serif;
+            font-size: 40px;
+            margin-top: 40px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The navbar -->
+    <div class="head_section" id="home">
+        <nav>
+            <a href="#home">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Courses</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <a href="#abt">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <button type="submit" class="btn btn3 " onclick="window.location.href='login.html'">Log In</button>
+        </nav>
+
+        <header>
+            <h1>Cyber School</h1>
+        </header>
+
+        <section data-aos="zoom-in">
+            <h2>Welcome to Cyber School</h2>
+            <p>At Cyber School, we offer a wide range of courses in cyber security, programming, and more.</p>
+            <P>Our experienced instructors are dedicated to helping you achieve your goals and succeed in your career.
+            </p>
+        </section>
+
+
+
+        <footer>
+            &copy; 2024 Cyber School
+        </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 300,
+                duration: 1000,
+
+            });
+        </script>
+    </div>
+    <!-- The about section -->
+    <div class="about" id="abt">
+        <div class="about-section" data-aos="zoom-out">
+            <h1>Cyber School</h1>
+            <p>The Online learning platform for cyber security anthusiasts</p>
+        </div>
+
+        <div class="content">
+            <div class="column">
+                <div class="card" data-aos="flip-left">
+                    <img src="cyber-security-1805246_1280.png" alt="Jane" style="width:100%">
+                    <div class="container">
+                        <h2 class="title">Creator</h2>
+                        <p>student </p>
+                        <p class="mail">vijaykumawat2018@gmail.com</p>
+                        <p><button class="button" onclick="window.location.href='#contact'">Contact</button></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- The about main content area -->
+            <main class="main" data-aos="zoom-in">
+                <h2>Our Mission</h2>
+                <p data-aos="flip-left">Our mission is to provide high-quality, affordable, and accessible cyber
+                    security
+                    education to anyone who
+                    wants to learn and pursue a career in this field. We believe that cyber security is a vital skill
+                    for
+                    the digital age, and that everyone should have the opportunity to acquire it.</p>
+
+                <h2>Our Features</h2>
+                <p id="feature">Our features include:</p>
+                <ul data-aos="flip-left">
+                    <li>Self-paced and flexible learning: You can learn at your own pace and schedule, and access our
+                        courses anytime and anywhere.</li>
+                    <li>Practical and relevant skills: You can learn the latest and most in-demand cyber security
+                        skills,
+                        such as ethical hacking, penetration testing, cryptography, and more.</li>
+                    <li>Recognized and valued credentials: You can earn certificates and badges that demonstrate your
+                        achievements and competencies, and boost your resume and career prospects.</li>
+                </ul>
+
+
+            </main>
+        </div>
+    </div>
+    <div class="container" data-aos="zoom-in" id="contact">
+        <div class="raw">
+
+            <div class="contact-left">
+                <div class="address ">
+                    <h1 class=" logo"> <i class="fa-solid fa-house"></i></h1>
+                    <h3>Address</h3>
+                    <p>Loha Mandi Road , Jaipur , Rajasthan</p>
+                </div>
+                <div class="email">
+                    <h1 class=" logo"><i class="fa-sharp fa-solid fa-paper-plane"></i></h1>
+                    <h3>Email</h3>
+                    <p>saritaparihar5704@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <h1 class=" logo"><i class="fa-solid fa-phone"></i></h1>
+                    <h3>Phone</h3>
+                    <p>9024966371</p>
+                </div>
+                <div class="social-icons">
+                    <a href=" "><i class="fa-brands fa-instagram"></i></a>
+                    <a href=" "><i class="fa-brands fa-github"></i></a>
+                    <a href=" "><i class="fa-brands fa-twitter"></i></a>
+                    <a href=" "><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="contact-right-2">
+                    <h1>Sent us a message</h1>
+                    <p>If you have any type of question about the tutorial or any work from me , you can sent me message
+                        from here. it's my pleasure to help you</p>
+                </div>
+                <form data-aos="flip-left">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Sent Now</button>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+```
